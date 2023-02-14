@@ -27,7 +27,7 @@ const questions = [
   },
   {
     type: "list",
-    name: "licence",
+    name: "license",
     message: "Choose a licence for you project:",
     choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
   },
@@ -39,20 +39,34 @@ const questions = [
   },
   {
     type: "input",
-    name: "gitubUsername",
+    name: "githubUsername",
     message: "Enter your github username",
   },
 
-  { type: "input", name: "email", message: "Enter you email address" },
+  { type: "input", name: "email", message: "Enter your email address" },
 ];
 
-inquirer.prompt(questions).then((response) => console.log(response));
-
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("README generated successfully!");
+  });
+}
 
 // function to initialize program
-function init() {}
+function init() {
+  inquirer.prompt(questions).then((data) => {
+    readme = generateMarkdown(data);
+
+    writeToFile("Readme.md", readme);
+
+    console.log(data);
+    console.log(readme);
+  });
+}
 
 // function call to initialize program
 init();
