@@ -1,9 +1,16 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+//getting absolute path for the generatwMardown file
+//This prevents you from having to ammend the relative path if the package id relocated within the file structure of the professional readme generator
+const generateMarkdownDir = path.resolve(__dirname, "generateMarkdown");
+const generateMarkdownFile = path.join(
+  generateMarkdownDir,
+  "generateMarkdown.js"
+);
+const generateMarkdown = require(generateMarkdownFile);
 
-// array of questions for user
+// array of questions to be passed to the inquirer prompt method
 const questions = [
   {
     type: "input",
