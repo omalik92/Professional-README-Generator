@@ -3,7 +3,7 @@ const path = require("path");
 const inquirer = require("inquirer");
 //getting absolute path for the generatwMardown file
 //This prevents you from having to ammend the relative path if the package id relocated within the file structure of the professional readme generator
-const generateMarkdownDir = path.resolve(__dirname, "generateMarkdown");
+const generateMarkdownDir = path.resolve(__dirname, "utils");
 const generateMarkdownFile = path.join(
   generateMarkdownDir,
   "generateMarkdown.js"
@@ -33,6 +33,11 @@ const questions = [
     message: "Enter the usage information for your project",
   },
   {
+    type: "input",
+    name: "credits",
+    message: "Enter any credits for the project",
+  },
+  {
     type: "list",
     name: "license",
     message: "Choose a licence for you project:",
@@ -43,6 +48,11 @@ const questions = [
     type: "input",
     name: "contributing",
     message: "Enter the contributon guidlines for your project",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "Enter any test instructions for the project",
   },
   {
     type: "input",
@@ -68,7 +78,7 @@ function init() {
   inquirer.prompt(questions).then((data) => {
     readme = generateMarkdown(data);
 
-    writeToFile("Readme.md", readme);
+    writeToFile("README.md", readme);
 
     console.log(data);
     console.log(readme);

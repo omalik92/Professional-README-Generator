@@ -42,6 +42,9 @@ function generateMarkdown(data) {
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
   # ${data.title}
 
@@ -57,6 +60,10 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
+  ## Credits
+
+   ${data.credits}
+
   ## License 
   
   ${licenseNotice}
@@ -65,13 +72,16 @@ function generateMarkdown(data) {
 
   ${data.contributing}
 
+  ## Tests
+
+  ${data.tests}
+
   ## Questions
 
   My Github profile [click here](https://github.com/${data.githubUsername})
 
-  Contact me by email for any question at ${data.email}
+  Contact me by email with any questions at ${data.email}
 
 `;
 }
-
 module.exports = generateMarkdown;
