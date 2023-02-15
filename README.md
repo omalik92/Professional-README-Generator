@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+# Professional README Generator
+
 ## Table of Contents
 
 - [Description](#description)
@@ -10,8 +12,6 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-
-  # Professional README Generator
 
   ## Description
 

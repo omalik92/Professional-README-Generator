@@ -35,6 +35,8 @@ function generateMarkdown(data) {
   
   ${badge}
 
+  # ${data.title}
+
   ## Table of Contents
 
 - [Description](#description)
@@ -45,8 +47,6 @@ function generateMarkdown(data) {
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-
-  # ${data.title}
 
   ## Description
 
