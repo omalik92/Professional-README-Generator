@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Professional README Generator
+# Professional-README-Generator
 
 ## Table of Contents
 
@@ -15,19 +15,19 @@
 
   ## Description
 
-  This project involved creating a professional readme generator that uses command line inputs from the user to generate a proffesional looking readme.
+  This is a node applications to generate professional looking README files for you Github repository. The application utilises the inquirer package to prompt and capture user inputs to generate your README file.
 
   ## Installation
 
-  To install this package download and save the repository files to your local machine. Ensure you have node installed as this is a pre-requisite. From your terminal navigate to the PROFESSIONAL-README-GENRATOR directory and run npm install. This should install all the required package dependencies. Once the install is complete the generator can be run using the command node index.js.
+  To install this package download the repository files to your local machine. Ensure you have node.js v16 installed. To check your current node version type `node -v` in your console. From your terminal navigate to the Proffesonal-README-Generator directory and run `npm install` this will ensure you have all the required dependencies to run the application.
 
   ## Usage
 
-  To use the application run the node index.js command from within the directory in your terminal. Fill in the required information requested by the prompts.
+  To use the application use the `node index.js` command from within the directory. The application will then log a series of prompts to capture the required information to generate your README file.
 
   ## Credits
 
-  No credits currently
+  N/A
 
   ## License
 
@@ -35,7 +35,7 @@
 
   ## Contributing
 
-  To contribute to this project get in contact with me via. details below.
+  To contribute to this project get in contace using the details below.
 
   ## Tests
 
