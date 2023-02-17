@@ -76,9 +76,6 @@ function init() {
     readme = generateMarkdown(data);
 
     writeToFile("README.md", readme);
-
-    console.log(data);
-    console.log(readme);
   });
 }
 
